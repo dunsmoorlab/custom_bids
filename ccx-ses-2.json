@@ -1,0 +1,66 @@
+{
+    "descriptions": [
+        {
+            "dataType": "anat",
+            "modalityLabel": "T1w",
+            "criteria": {
+                "SeriesDescription": "ANAT_T1",
+                "SeriesNumber": 6
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-renewal",
+            "criteria": {
+                "SeriesDescription": "Run4_renewal",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-memory",
+            "criteria": {
+                "SeriesDescription": "Run5_memory",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-AP",
+            "criteria": {
+                "SeriesDescription": "Run4_fMRI_distortion_AP_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-PA",
+            "criteria": {
+                "SeriesDescription": "Run4_fMRI_distortion_PA_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+                {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-AP",
+            "criteria": {
+                "SeriesDescription": "Run5_fMRI_distortion_AP_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-PA",
+            "criteria": {
+                "SeriesDescription": "Run5_fMRI_distortion_PA_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN"
+            }
+        }
+    ]
+}

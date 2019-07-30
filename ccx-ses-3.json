@@ -1,0 +1,205 @@
+{
+    "descriptions": [
+        {
+            "dataType": "anat",
+            "modalityLabel": "T1w",
+            "criteria": {
+                "SeriesDescription": "ANAT_T1",
+                "SeriesNumber": 6
+            }
+        },
+        {
+            "dataType": "anat",
+            "modalityLabel": "T2w",
+            "criteria": {
+                "SeriesDescription": "ANAT_T2_BW_MATCHED",
+                "SeriesNumber": 38
+            }
+        },
+        {
+            "dataType": "dwi",
+            "modalityLabel": "dwi",
+            "criteria": {
+                "SeriesDescription": "ABCD_SMS_dMRI_AP"
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-renewal",
+            "criteria": {
+                "SeriesDescription": "Run8_renewal",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-memory",
+            "criteria": {
+                "SeriesDescription": "Run9_memory",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-memory",
+            "criteria": {
+                "SeriesDescription": "Run10_memory",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-localizer",
+            "criteria": {
+                "SeriesDescription": "Run11_localizer1",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-localizer",
+            "criteria": {
+                "SeriesDescription": "Run12_localizer2",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-AP",
+            "criteria": {
+                "SeriesDescription": "Run8_fMRI_distortion_AP_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN",
+                "SequenceVariant": "SK",
+                "PhaseEncodingDirection": "j-"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-PA",
+            "criteria": {
+                "SeriesDescription": "Run8_fMRI_distortion_PA_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN",
+                "PhaseEncodingDirection": "j",
+                "SequenceVariant": "SK"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-AP",
+            "criteria": {
+                "SeriesDescription": "Run9_fMRI_distortion_AP_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN",
+                "SequenceVariant": "SK",
+                "PhaseEncodingDirection": "j-"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-PA",
+            "criteria": {
+                "SeriesDescription": "Run9_fMRI_distortion_PA_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN",
+                "PhaseEncodingDirection": "j",
+                "SequenceVariant": "SK"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-AP",
+            "criteria": {
+                "SeriesDescription": "Run10_fMRI_distortion_AP_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN",
+                "SequenceVariant": "SK",
+                "PhaseEncodingDirection": "j-",
+                "SeriesNumber": 19
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-PA",
+            "criteria": {
+                "SeriesDescription": "Run10_fMRI_distortion_PA_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN",
+                "PhaseEncodingDirection": "j",
+                "SequenceVariant": "SK"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-AP",
+            "criteria": {
+                "SeriesDescription": "Run11_fMRI_distortion_AP_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN",
+                "SequenceVariant": "SK",
+                "PhaseEncodingDirection": "j-"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-PA",
+            "criteria": {
+                "SeriesDescription": "Run11_fMRI_distortion_PA_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN",
+                "PhaseEncodingDirection": "j",
+                "SequenceVariant": "SK"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-AP",
+            "criteria": {
+                "SeriesDescription": "Run12_fMRI_distortion_AP_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN",
+                "SequenceVariant": "SK",
+                "PhaseEncodingDirection": "j-"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-PA",
+            "criteria": {
+                "SeriesDescription": "Run12_fMRI_distortion_PA_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN",
+                "PhaseEncodingDirection": "j",
+                "SequenceVariant": "SK"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-AP",
+            "criteria": {
+                "SeriesDescription": "SMS_dMRI_Distortion_Map_AP",
+                "BodyPartExamined": "BRAIN",
+                "PhaseEncodingDirection": "j-",
+                "SequenceVariant": "SK_SP"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-PA",
+            "criteria": {
+                "SeriesDescription": "SMS_dMRI_Distortion_Map_PA",
+                "BodyPartExamined": "BRAIN",
+                "SequenceVariant": "SK_SP",
+                "PhaseEncodingDirection": "j"
+            }
+        }       
+    ]
+}

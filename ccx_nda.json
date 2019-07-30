@@ -1,0 +1,52 @@
+{
+    "descriptions": [
+        {
+            "dataType": "anat",
+            "modalityLabel": "T1w",
+            "criteria": {
+                "SeriesDescription": "ANAT_T1",
+                "SeriesNumber": 6
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-fear",
+            "TaskName": "fear",
+            "criteria": {
+                "SeriesDescription": "Run1_fear_conditioning",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-fearextinction",
+            "TaskName": "fearextinction",
+            "criteria": {
+                "SeriesDescription": "Run2_fear_conditioning_extinction",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-extinction",
+            "TaskName": "extinction",
+            "criteria": {
+                "SeriesDescription": "Run3_extinction",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-renewal",
+            "TaskName": "renewal",
+            "criteria": {
+                "SeriesDescription": "Run4_renewal",
+                "BodyPartExamined": "BRAIN"
+            }
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+{
+    "descriptions": [
+        {
+            "dataType": "anat",
+            "modalityLabel": "T1w",
+            "criteria": {
+                "SeriesDescription": "ANAT_T1",
+                "SeriesNumber": 6
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-fear",
+            "criteria": {
+                "SeriesDescription": "Run1_fear_conditioning",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-fearextinction",
+            "criteria": {
+                "SeriesDescription": "Run2_fear_conditioning_extinction",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "func",
+            "modalityLabel": "bold",
+            "customLabels": "task-extinction",
+            "criteria": {
+                "SeriesDescription": "Run3_extinction",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-AP",
+            "criteria": {
+                "SeriesDescription": "Run1_fMRI_distortion_AP_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-PA",
+            "criteria": {
+                "SeriesDescription": "Run1_fMRI_distortion_PA_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+                {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-AP",
+            "criteria": {
+                "SeriesDescription": "Run2_fMRI_distortion_AP_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-PA",
+            "criteria": {
+                "SeriesDescription": "Run2_fMRI_distortion_PA_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-AP",
+            "criteria": {
+                "SeriesDescription": "Run3_fMRI_distortion_AP_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN"
+            }
+        },
+        {
+            "dataType": "fmap",
+            "modalityLabel": "epi",
+            "customLabels": "dir-PA",
+            "criteria": {
+                "SeriesDescription": "Run3_fMRI_distortion_PA_2.5_SMS_6",
+                "BodyPartExamined": "BRAIN"
+            }
+        }
+    ]
+}

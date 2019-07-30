@@ -6,15 +6,15 @@ assumes that you have installed dcm2niix and dcm2bids
 	`pip install dcm2bids`
 
 also assumes that you have all of the config files in the dicom folder
-	i.e. ```CCX_dcm/ccx_ses-1.json
-	     CCX_dcm/ccx_ses-2.json
-		 CCX_dcm/ccx_ses-3.json
-		 CCX_dcm/ccx_ses-3-pre-10.json
+	i.e. ```CCX_dcm/ccx_ses-1.json  
+		 CCX_dcm/ccx_ses-2.json  
+		 CCX_dcm/ccx_ses-3.json  
+		 CCX_dcm/ccx_ses-3-pre-10.json  
 		 CCX_dcm/ccx_nda.json```
 
 to run:
-	1. navigate terminal to the directory one level above the dicom folder
-		i.e. `current_dir/CCX_dcm`
+	1. navigate terminal to the directory one level above the dicom folder  
+		i.e. `current_dir/CCX_dcm` <br />
 	2. initialize output folder by running:
 		`python custom_bids.py -i True -o CCX-bids`
 	3. convert a single subject by replacing CCX000 with the desired subject and running: 

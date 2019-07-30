@@ -22,8 +22,6 @@ initialize output folder by running:
 convert a single subject by replacing CCX000 with the desired subject and running: 
     <p>`python custom_bids.py -s CCX000 -d CCX_dcm -o CCX-bids`</p>
 
-display help:
-   <p>`python custom_bids.py --help`</p>
+display help: <p>`python custom_bids.py --help`</p>
 
 written gus hennings
-"""

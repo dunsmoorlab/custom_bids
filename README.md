@@ -2,8 +2,8 @@
 custom bids conversion script utilizing python
 
 assumes that you have installed dcm2niix and dcm2bids
-    <p>conda install -c conda-forge dcm2niix</p>
-    <p>pip install dcm2bids</p>
+    <p>`conda install -c conda-forge dcm2niix`</p>
+    <p>`pip install dcm2bids`</p>
 
 also assumes that you have all of the config files in the dicom folder
 <blockquote>
@@ -14,16 +14,16 @@ also assumes that you have all of the config files in the dicom folder
 <p>CCX_dcm/ccx_nda.json</p>
 </blockquote>
 
-#to run:
+##to run:
 1. navigate terminal to the directory one level above the dicom folder  
-    `current_dir/CCX_dcm`
+    <p>`current_dir/CCX_dcm`</p>
 2. initialize output folder by running:
-    `python custom_bids.py -i True -o CCX-bids`
+    <p>`python custom_bids.py -i True -o CCX-bids`</p>
 3. convert a single subject by replacing CCX000 with the desired subject and running: 
-    `python custom_bids.py -s CCX000 -d CCX_dcm -o CCX-bids`
+    <p>`python custom_bids.py -s CCX000 -d CCX_dcm -o CCX-bids`</p>
 
-display this message:
-    `python custom_bids.py --help`
+display help:
+   <p>`python custom_bids.py --help`</p>
 
-written by gus hennings
+written gus hennings
 """

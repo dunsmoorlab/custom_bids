@@ -15,11 +15,11 @@ also assumes that you have all of the config files in the dicom folder
 </blockquote>
 
 ## to run:
-1. navigate terminal to the directory one level above the dicom folder  
-    <p>`current_dir/CCX_dcm`</p>
-2. initialize output folder by running:
+navigate terminal to the directory one level above the dicom folder  
+   	<p>`current_dir/CCX_dcm`</p>
+initialize output folder by running:
     <p>`python custom_bids.py -i True -o CCX-bids`</p>
-3. convert a single subject by replacing CCX000 with the desired subject and running: 
+convert a single subject by replacing CCX000 with the desired subject and running: 
     <p>`python custom_bids.py -s CCX000 -d CCX_dcm -o CCX-bids`</p>
 
 display help:

@@ -14,7 +14,7 @@ also assumes that you have all of the config files in the dicom folder
 <p>CCX_dcm/ccx_nda.json</p>
 </blockquote>
 
-##to run:
+## to run:
 1. navigate terminal to the directory one level above the dicom folder  
     <p>`current_dir/CCX_dcm`</p>
 2. initialize output folder by running:

@@ -49,13 +49,13 @@ output = os.path.join(os.getcwd(),args.out) #find the output dir
 #check to see if we are just initializing the output
 if args.init:
 	print('initializing output')
-	if not os.path.exists(output): os.mkdir(output)
-	for file_name in ['README','participants.tsv','CHANGES','dataset_description.json']: 
+	if not os.path.exists(output): os.mkdir(output) #create output if doesn't exists
+	for file_name in ['README','participants.tsv','CHANGES','dataset_description.json']: #create bids necessary files 
 		if file_name == 'README':
-			with open(os.path.join(output,file_name),'w+') as file: file.write('CCX bids'); file.close()
-		else: open(os.path.join(output,file_name),'w+')
+			with open(os.path.join(output,file_name),'w+') as file: file.write('CCX bids'); file.close() #readme can't be empty
+		else: open(os.path.join(output,file_name),'w+') #just make empty files with 'w+'
 
-	deriv = os.path.join(output,'derivatives')
+	deriv = os.path.join(output,'derivatives') #we'll probably need this
 	if not os.path.exists(deriv): os.mkdir(deriv)
 
 	sys.exit()

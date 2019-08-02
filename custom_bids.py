@@ -36,11 +36,11 @@ from warnings import warn
 parser = argparse.ArgumentParser(description=__doc__,
 	formatter_class=argparse.RawDescriptionHelpFormatter)
 
-parser.add_argument('-s','--subj',  default='s666',type=str, help='subject #')
-parser.add_argument('-d','--dcm',   default=None,  type=str, help='dicom directory')
-parser.add_argument('-o','--out',   default=None,  type=str, help='bids outputdir')
-parser.add_argument('-n','--nda', 	default=False, type=bool,help='NDA conversion for CCX')
-parser.add_argument('-i','--init',  default=False, type=bool,help='initialize the output')
+parser.add_argument('-s', '--subj',  default='s666',type=str, help='subject #')
+parser.add_argument('-d', '--dcm',   default=None,  type=str, help='dicom directory')
+parser.add_argument('-o', '--out',   default=None,  type=str, help='bids outputdir')
+parser.add_argument('-n', '--nda', 	 default=False, type=bool,help='NDA conversion for CCX')
+parser.add_argument('-i', '--init',  default=False, type=bool,help='initialize the output')
 args = parser.parse_args()
 
 
@@ -49,8 +49,15 @@ output = os.path.join(os.getcwd(),args.out) #find the output dir
 #check to see if we are just initializing the output
 if args.init:
 	print('initializing output')
-	os.system('dcm2bids_scaffold -o %s'%(output))
-	os.system('echo "python wrapper script written by Gus Hennings" >> %s/README'%(output))
+	if not os.path.exists(output): os.mkdir(output)
+	for file_name in ['README','participants.tsv','CHANGES','dataset_description.json']: 
+		if file_name == 'README':
+			with open(os.path.join(output,file_name),'w+') as file: file.write('CCX bids'); file.close()
+		else: open(os.path.join(output,file_name),'w+')
+
+	deriv = os.path.join(output,'derivatives')
+	if not os.path.exists(deriv): os.mkdir(deriv)
+
 	sys.exit()
 
 data_dir = os.path.join(os.getcwd(),args.dcm) #find the dicom dir

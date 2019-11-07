@@ -18,6 +18,8 @@ to run:
 		"python custom_bids.py -i True -o CCX-bids"
 	3. convert a single subject by replacing CCX000 with the desired subject and running: 
 		"python custom_bids.py -s CCX000 -d CCX_dcm -o CCX-bids"
+	4. to convert just a single session, use the -e flag:
+		"python custom_bids.py -s CCX000 -d CCX_dcm -o CCX-bids -e 3"
 
 display this message - python custom_bids.py --help
 
@@ -41,6 +43,7 @@ parser.add_argument('-d', '--dcm',   default=None,  type=str, help='dicom direct
 parser.add_argument('-o', '--out',   default=None,  type=str, help='bids outputdir')
 parser.add_argument('-n', '--nda', 	 default=False, type=bool,help='NDA conversion for CCX')
 parser.add_argument('-i', '--init',  default=False, type=bool,help='initialize the output')
+parser.add_argument('-e', '--sess',  default=0, 	type=int, help='just convert this session')
 args = parser.parse_args()
 
 
@@ -68,9 +71,10 @@ sub_arg = 'CCX_%s'%(args.subj[-3:]) #this is format the dicom folders are in
 day1dcm = os.path.join(data_dir,sub_arg + '_01')
 day2dcm = os.path.join(data_dir,sub_arg + '_02')
 day3dcm = os.path.join(data_dir,sub_arg + '_03')
-
+dir_list = [day1dcm,day2dcm,day3dcm]
+if args.sess is not 0: dir_list = [dir_list[int(args.sess - 1)]]
 #and raise an error if we can't
-for _dir in [day1dcm,day2dcm,day3dcm]: 
+for _dir in dir_list:
 	try: assert os.path.exists(_dir)
 	except: print('Dicom directory not found: %s'%(_dir)); sys.exit()
 
@@ -106,14 +110,18 @@ if args.nda:
 	sys.exit()
 #############################################################
 #if not running conversion for NDA, convert each session one at a time
-for i, dcm in enumerate([day1dcm,day2dcm,day3dcm]):
-	ses = i+1 #fix pythonic indexing (no ses-0)
+dcm_list = [day1dcm,day2dcm,day3dcm]
+if args.sess is not 0: dcm_list = [dcm_list[int(args.sess - 1)]]
+for i, dcm in enumerate(dcm_list):
+	if args.sess is 0: ses = i+1 #fix pythonic indexing (no ses-0)
+	else: ses = args.sess
+
 	print('running BIDS coversion for sub-%s ses-%s'%(args.subj,ses))
 	
 	#some subjects are missing a field map so they need their own config for ses-3
 	if ses == 3 and int(args.subj[-3:]) <= 10:
 			cfg = 'ccx-ses-%s-pre-10.json'%(ses)
-			warn('skipping run 10 fielmaps!')
+			warn('skipping run 10 fieldmaps!')
 	else: cfg = 'ccx-ses-%s.json'%(ses) #otherwise this is the config file
 	
 	config = os.path.join(data_dir,cfg) #load the config file
@@ -164,7 +172,9 @@ fmaps = {	'Run1':'fear',
 			}
 
 sub_bid = os.path.join(output,'sub-' + args.subj)
-for ses in [1,2,3]:
+sess_list = [1,2,3]
+if args.sess is not 0: sess_list = [sess_list[int(args.sess - 1)]]
+for ses in sess_list:
 	ses_dir = os.path.join(sub_bid,'ses-%s'%(ses))
 	fmap_dir = os.path.join(ses_dir,'fmap')
 	files = os.listdir(fmap_dir) 

@@ -13,7 +13,7 @@
             "modalityLabel": "T2w",
             "criteria": {
                 "SeriesDescription": "ANAT_T2_BW_MATCHED",
-                "SeriesNumber": 38
+                "SeriesNumber": 23
             }
         },
         {
